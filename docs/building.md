@@ -6,7 +6,7 @@ build out of tree so the recommended way is to clone from git and make a build/
 directory.
 
 **Dependencies**
- * basic: libmraa, cmake, swig, pkgconfig, pthreads, librt
+ * basic: libmraa, cmake, swig, pkg-config, pthreads, librt
  * bindings: python-dev, nodejs-dev, openjdk
  * documentation: doxygen, graphviz, sphinx, yuidoc
  * sensor specific: bacnet-mstp, modbus, openzwave, jpeg
