@@ -1,0 +1,5 @@
+set (libname "2smpb02e")
+set (libdescription "Omron Digital Barometric Pressure Sensor")
+set (module_src "${libname}.cxx" "2smpb02e.cxx")
+set (module_hpp "${libname}.hpp" "2smpb02e.hpp")
+upm_module_init(mraa)

@@ -1,0 +1,28 @@
+{
+    "Library": "2smpb02e",
+    "Description": "Omron Digital Barometric Pressure Sensor",
+    "Sensor Class": {
+        "d6t": {
+            "Name": "API for Barometric Pressure Sensor",
+            "Description": "This is the UPM Module for the Omron Barometric Pressure Sensor using I2C interface.",
+            "Aliases": ["Absolute Pressure Sensor"],
+            "Connections": ["I2C"],
+            "Project Type": ["sensor"],
+            "Manufacturers": ["Omron"],
+            "Examples": {
+                "C++": ["2smpb02e.cxx"]
+            },
+            "Platforms": {
+                "Intel Edison": {
+                    "Notes": ["Might need omron barometric pressure sensor"]
+                }
+            },
+            "Urls": {
+                "Product Pages": ["https://www.components.omron.com/product-detail?partId=35065"],
+                "Datasheets": ["https://omronfs.omron.com/en_US/ecb/products/pdf/en_2smpb_02e.pdf"]
+            }
+        }
+    }
+}
+
+
