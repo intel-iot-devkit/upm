@@ -1,0 +1,28 @@
+{
+    "Library": "b5t007001",
+    "Description": "Omron B5T Human Vision Component (HVC-P2)",
+    "Sensor Class": {
+        "B5T007001": {
+            "Name": "API for B5T007001 Sensor Module",
+            "Description": "This is the UPM Module for the Omron Human Vision Component",
+            "Aliases": ["HVC-P2"],
+            "Categories": ["USB"],
+            "Connections": ["USB and UART"],
+            "Project Type": ["sensor"],
+            "Manufacturers": ["Omron"],
+            "Examples": {
+                "C++": ["b5t007001_register.cxx"]
+				"C++": ["b5t007001_sample.cxx"]
+            },
+            "Platforms": {
+                "Intel Edison": {
+                    "Notes": ["Might need omron human vision component sensor HVC-P2"]
+                }
+            },
+            "Urls": {
+                "Product Pages": ["https://www.components.omron.com/mobile/hvc_p2"],
+                "Datasheets": ["https://omronfs.omron.com/en_US/ecb/products/pdf/en-b5t.pdf"]
+            }
+        }
+    }
+}
