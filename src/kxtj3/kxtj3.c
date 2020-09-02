@@ -704,7 +704,7 @@ upm_result_t kxtj3_sensor_software_reset(const kxtj3_context dev)
     if (kxtj3_set_bit_on(dev, KXTJ3_CTRL_REG2, KXTJ3_CTRL_REG2_SRST) != UPM_SUCCESS)
         return UPM_ERROR_OPERATION_FAILED;
 
-    uint8_t ctrl_reg2_data;
+    uint8_t ctrl_reg2_data = 0;
     kxtj3_read_register(dev, KXTJ3_CTRL_REG2, &ctrl_reg2_data);
 
     uint8_t srst_counter = 0;
@@ -813,7 +813,7 @@ upm_result_t kxtj3_enable_interrupt_pin(const kxtj3_context dev, KXTJ3_INTERRUPT
                                         KXTJ3_INTERRUPT_RESPONSE_T response_type)
 {
     assert(dev != NULL);
-    uint8_t int_reg_value;
+    uint8_t int_reg_value = 0;
     kxtj3_read_register(dev, KXTJ3_INT_CTRL_REG1, &int_reg_value);
 
     if (polarity)
@@ -854,7 +854,7 @@ upm_result_t kxtj3_set_interrupt_response(const kxtj3_context dev, KXTJ3_INTERRU
 bool kxtj3_get_interrupt_status(const kxtj3_context dev)
 {
     assert(dev != NULL);
-    uint8_t status_reg_value;
+    uint8_t status_reg_value = 0;
     kxtj3_read_register(dev, KXTJ3_STATUS_REG, &status_reg_value);
     if (!(status_reg_value & KXTJ3_STATUS_REG_INT))
         return false;
@@ -944,7 +944,7 @@ kxtj3_wakeup_axes kxtj3_get_wakeup_axis_and_direction(kxtj3_context dev)
 {
     assert(dev != NULL);
 
-    uint8_t int_source2_value;
+    uint8_t int_source2_value = 0;
     kxtj3_read_register(dev, KXTJ3_INT_SOURCE2, &int_source2_value);
 
     kxtj3_wakeup_axes wakeup_axis;

@@ -99,6 +99,11 @@ if (CMAKE_CXX_COMPILER_ID STREQUAL "GNU" AND CMAKE_CXX_COMPILER_VERSION VERSION_
   list (APPEND C_CXX_WARNING_FLAGS -Wno-misleading-indentation)
 endif ()
 
+# clang-10 added -Wmisleading-indentation as well, skip it too
+if (CMAKE_CXX_COMPILER_ID STREQUAL "Clang" AND CMAKE_CXX_COMPILER_VERSION VERSION_GREATER "9")
+  list (APPEND C_CXX_WARNING_FLAGS -Wno-misleading-indentation)
+endif ()
+
 # Warnings as errors?
 if (WERROR)
   list (APPEND C_CXX_WARNING_FLAGS -Werror)
