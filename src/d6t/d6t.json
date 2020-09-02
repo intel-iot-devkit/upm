@@ -1,0 +1,26 @@
+{
+    "Library": "d6t",
+    "Description": "Omron MEMS D6T Thermal Sensor",
+    "Sensor Class": {
+        "d6t": {
+            "Name": "API for D6T Sensor",
+            "Description": "This is the UPM Module for Omron MEMS D6T Thermal Sensor",
+            "Aliases": ["IR Sensor"],
+            "Connections": ["I2C"],
+            "Project Type": ["sensor"],
+            "Manufacturers": ["Omron"],
+            "Examples": {
+                "C++": ["d6t.cxx"]
+            },
+            "Platforms": {
+                "Intel Edison": {
+                    "Notes": ["Might need omron thermal sensor"]
+                }
+            },
+            "Urls": {
+                "Product Pages": ["https://www.components.omron.com/parametric-search?nodeId=404010&nodeParentId=4040"],
+                "Datasheets": ["https://omronfs.omron.com/en_US/ecb/products/pdf/en_D6T_catalog.pdf"]
+            }
+        }
+    }
+}

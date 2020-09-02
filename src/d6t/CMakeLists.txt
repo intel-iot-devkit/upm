@@ -1,0 +1,5 @@
+set (libname "d6t")
+set (libdescription "Mems Thermal Sensors")
+set (module_src "${libname}.cxx" "d6t.cxx")
+set (module_hpp "${libname}.hpp" "d6t.hpp") 
+upm_module_init(mraa)
