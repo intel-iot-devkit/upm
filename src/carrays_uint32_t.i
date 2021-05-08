@@ -24,7 +24,11 @@
 %typemap(in) uint32_t {
   int ecode2 = 0 ;
   if (($input)->IsInt32())
+%#if (V8_MAJOR_VERSION-0) < 7
     $1 = ($input)->Uint32Value();
+%#else
+    $1 = ($input)->Uint32Value(SWIGV8_CURRENT_CONTEXT()).FromJust();
+%#endif
   else
     SWIG_exception_fail(SWIG_ArgError(ecode2), "failed to convert uint32");
 }

@@ -27,7 +27,7 @@ void cleanUp()
     /* Call the v8 garbage collector as long as there is memory to clean up
      * See https://codereview.chromium.org/412163003 for this API change
      */
-#if (SWIG_V8_VERSION < 0x032838)
+#if (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x032838)
     while (!v8::V8::IdleNotificationDeadline())
 #else
     while (!v8::Isolate::GetCurrent()->IdleNotificationDeadline(1000))
